@@ -12,7 +12,7 @@ There is no email reset link. An administrator sets a new one from the server.
 2. Run this, replacing the email:
 
    ```bash
-   docker compose -f compose.yml -f compose.staging.yml run --rm migrate uv run --no-sync python scripts/reset_password.py someone@jordanselect.com
+   docker compose -f compose.yml -f compose.staging.yml run --rm migrate uv run --no-sync python scripts/reset_password.py someone@example.com
    ```
 
 3. Type the new password when asked. It will not show on screen. Minimum 8 characters.
