@@ -1,33 +1,55 @@
 # Daily health check
 
-**When to use this:** You want to be sure the CRM is OK.
+**When to use this:** Every morning, or any time you want to be sure the CRM is OK.
 **Time it takes:** 2 minutes
-**You need:** _(list the access or logins needed)_
+**You need:** A browser. A terminal on the server for the full check.
 
-## Before you start
+## Quick check (no terminal)
 
-- [ ] _(anything to check or back up first)_
+1. Open the CRM and sign in.
+2. Open a recent file. It should load with its details.
+3. Open the health address in the browser: `http://<server>:5180/api/v1/health/ready`
 
-## Steps
+   You should see `{"status":"ok","db":"ok", ...}`.
+   `"db":"down"` means the website is up but the database is not.
 
-1. _(One action, starting with a verb.)_
+## Full check (on the server)
+
+1. Go to the CRM folder (the one with `compose.yml`).
+
+2. See every box:
 
    ```bash
-   command here
+   docker compose -f compose.yml -f compose.staging.yml ps
    ```
 
-   You should see: _(what success looks like)_
+   Good looks like: `db`, `api`, `web`, `driver-api` are `running` or `healthy`;
+   `migrate` is `Exited (0)`.
 
-2. _(Next action.)_
+3. Look at the latest messages from the api:
 
-## Check it worked
+   ```bash
+   docker compose -f compose.yml -f compose.staging.yml logs --tail=50 api
+   ```
 
-- _(How to be sure: a page that loads, a status that says healthy.)_
+   A few lines are normal. A long run of the word `ERROR` is not.
+
+4. Check there is disk space left. A full disk stops the database.
+
+   ```bash
+   df -h
+   ```
+
+   Worry when the main disk is above about 85% used.
+
+5. Check a recent backup exists. See [Backups](backups.md).
 
 ## If something goes wrong
 
 | You see | Do this |
 |---|---|
-| _(error)_ | _(fix, or link to another page)_ |
+| A box is `restarting` or `unhealthy` | [The site is down](../crashes/site-down.md) |
+| `db: down` | [The site is down](../crashes/site-down.md), step 4 |
+| Disk above 85% | Tell the developer. Do **not** delete Docker volumes. |
 
 _Last checked: YYYY-MM-DD_
