@@ -11,6 +11,7 @@ every page is a short list of steps you can follow one at a time.
 
 | I want to... | Go to |
 |---|---|
+| Open a terminal on the server | [Connect with SSH](connect.md) |
 | Understand how code reaches the server | [How a deploy happens](deploy/automatic.md) |
 | Deploy when automation is down | [Deploy by hand](deploy/manual.md) |
 | Undo a bad release | [Go back](deploy/rollback.md) |

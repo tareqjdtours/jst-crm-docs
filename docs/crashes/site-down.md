@@ -2,7 +2,7 @@
 
 **When to use this:** Staff cannot open the CRM, pages do not load, or everything shows errors.
 **Time it takes:** 5 minutes to find the cause
-**You need:** A terminal on the server.
+**You need:** A terminal on the server ([how to connect](../connect.md)).
 
 !!! tip "Stay calm, change one thing at a time"
     The data is safe in the database volume. Most problems are fixed by
