@@ -18,9 +18,9 @@ const field = (d, label) => d.locator('label').filter({ hasText: new RegExp('^\\
   const { browser, page: p } = await L.open();
   await L.nav(p, 'Accounts');
   if (process.env.FROM === '4') return after(browser, p);
-  const btn = p.getByRole('button', { name: 'New', exact: true }).first();
+  const btn = p.getByRole('button', { name: 'New Account', exact: true }).first();
   await L.shot(p, OUT + '01-accounts.png', [
-    { box: await L.box(btn), text: 'Accounts → New', side: 'below', gap: 60, shift: 60, maxw: 200 },
+    { box: await L.box(btn), text: 'Accounts → New Account', side: 'below', gap: 60, shift: 60, maxw: 200 },
   ]);
   await btn.click(); await p.waitForTimeout(1000);
   const d = p.locator('[role=dialog]').last();

@@ -17,9 +17,9 @@ const field = (d, label) => d.locator('label').filter({ hasText: new RegExp('^\\
   const { browser, page: p } = await L.open();
   if (process.env.FROM === '4') { await L.openFile(p, 'Example Group C'); return after(browser, p); }
   await L.nav(p, 'Reservations');
-  const btn = p.getByRole('button', { name: 'New', exact: true }).first();
+  const btn = p.getByRole('button', { name: 'New Reservation', exact: true }).first();
   await L.shot(p, OUT + '01-reservations.png', [
-    { box: await L.box(btn), text: 'Reservations → New', side: 'below', gap: 60, shift: 60, maxw: 200 },
+    { box: await L.box(btn), text: 'Reservations → New Reservation', side: 'below', gap: 60, shift: 60, maxw: 200 },
   ]);
   await btn.click(); await p.waitForTimeout(1000);
   const d = p.locator('[role=dialog]').last();
@@ -46,7 +46,7 @@ const field = (d, label) => d.locator('label').filter({ hasText: new RegExp('^\\
   const pct = field(d, 'Profit %');
   await pct.fill('30');
   const owner = combo('Reservation Owner');
-  if (await owner.count()) { await owner.click(); await p.waitForTimeout(250); await p.getByRole('option').nth(1).click(); await p.waitForTimeout(300); }
+  if (await owner.count()) { await owner.click(); await p.waitForTimeout(250); await p.getByRole('listbox').last().getByRole('option').nth(1).click(); await p.waitForTimeout(300); }
   await pct.evaluate((e) => e.scrollIntoView({ block: 'center' })); await p.waitForTimeout(400);
   await L.shot(p, OUT + '03-profit.png', [
     { box: await L.box(owner), text: 'Who looks after this file', side: 'above', gap: 40, maxw: 200 },
