@@ -1,2 +1,5 @@
 site/
 .venv/
+.DS_Store
+# built from the HTML with tools/build-handbook.sh <role>
+handbooks/*/pdf/

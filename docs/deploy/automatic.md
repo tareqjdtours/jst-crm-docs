@@ -48,9 +48,10 @@ are built *during the backend's deploy*. So:
 
 | You see | Do this |
 |---|---|
-| Red at **Test** | A code problem. Tell the developer. The live site is unaffected. |
+| Red at **Test**, step "Start test services", `failed to connect to the docker API` | Not the code: the test and build stages run on the office Mac mini, and its Docker app was switched away from OrbStack. On the Mac: `docker context use orbstack`, then **Re-run failed jobs**. |
+| Red at **Test**, anything else | A code problem. Tell the developer. The live site is unaffected. |
 | Red at **Build** | A packaging problem. Re-run the job once; if it fails again, tell the developer. |
 | Red at **Deploy**, "Staging failed health verification" | The new version did not start. The old one is already stopped, so the site is down. Follow [The site is down](../crashes/site-down.md), then [Go back](rollback.md). |
 | Stuck on "Waiting for a runner" | The deploy machine is off or offline. Use [Deploy by hand](manual.md). |
 
-_Last checked: YYYY-MM-DD_
+_Last checked: 2026-11-11_

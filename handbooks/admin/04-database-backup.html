@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Database backup</title>
+<link rel="stylesheet" href="guide.css"></head><body>
+
+<div class="head"><small>Admin guide · Administrator</small>
+<h1>Database backup</h1>
+<p>Take a complete copy of the database before anything big: closing the year, a large import, an update to the CRM.</p></div>
+
+<div class="meta">
+<div><b>Who</b>The administrator</div>
+<div><b>Where</b>Setup → System Control → Database Backup</div>
+<div><b>Takes</b>1 minute</div>
+<div><b>You need</b>A name for the backup (optional)</div>
+</div>
+
+<h2>How it works</h2>
+<p>The server copies the whole database into its own backup folder. Nothing on this screen changes, deletes or restores data. Putting a backup back is done on the server by whoever looks after it.</p>
+<p>Example in this guide: a backup named <b>before-year-end</b>, taken before closing the year.</p>
+
+<h2>1. Open the screen</h2>
+<div class="keep"><div class="step"><div class="n">1</div><div>Click <b>System Control</b>, then the <b>Database Backup</b> tile.</div></div>
+<figure class="fig"><img src="img/04/01-tile.png"><figcaption>Under System, near the bottom of System Control.</figcaption></figure></div>
+
+<h2>2. Take the backup</h2>
+<div class="keep"><div class="step"><div class="n">2</div><div>Type a <b>Backup name</b> that says why you took it. Use letters, digits, dashes and underscores only. The date and time are added for you.</div></div>
+<div class="step"><div class="n">3</div><div>Click <span class="btn">Back up now</span>. It reads “Taking backup…” until it is done.</div></div>
+<figure class="fig"><img src="img/04/02-name.png"><figcaption>The top row shows which database is copied, its size, and the folder on the server.</figcaption></figure></div>
+
+<div class="keep"><div class="step"><div class="n">4</div><div>The backup appears under <b>Backups on the server</b>, newest first, with the time it was taken and its size. Click <span class="btn">Download</span> to keep a copy on your own computer as well.</div></div></div>
+
+<div class="box warn"><b class="t">Keep one copy off the server</b>A backup that only exists on the server is lost with the server. Download the important ones, such as before-year-end, and keep them somewhere safe.</div>
+
+<h2>When to take one</h2>
+<ul>
+<li>Before closing a year or a period.</li>
+<li>Before importing a large file (vouchers, a chart of accounts, opening balances).</li>
+<li>Before the CRM is updated.</li>
+</ul>
+
+<div class="foot">Last checked: ____ · Screens shown are from a test copy of the CRM with made-up data.</div>
+</body></html>

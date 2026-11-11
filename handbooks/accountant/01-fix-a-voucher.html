@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Fixing a mistake on a voucher</title>
+<link rel="stylesheet" href="guide.css"></head><body>
+
+<div class="head"><small>Accounting guide · Accountants</small>
+<h1>Fixing a mistake on a voucher</h1>
+<p>What to click when a voucher is wrong: edit it, take it back, reverse it or delete it.</p></div>
+
+<div class="meta">
+<div><b>Who</b>Accountants</div>
+<div><b>Where</b>Accounting → Vouchers → click the voucher</div>
+<div><b>Takes</b>2 to 5 minutes</div>
+<div><b>You need</b>The permission “Unpost or delete a voucher” (the Accountant role has it)</div>
+</div>
+
+<h2>1. First, find out which kind of voucher you have</h2>
+<p>Open <b>Accounting → Vouchers</b>. Every voucher is in one of three states, and the state decides what you can do.</p>
+<div class="states">
+<div><h4>Draft</h4><span class="pill">In the Inbox</span><p>Waiting for approval. It has <b>no number</b> yet and affects no figure.</p></div>
+<div><h4>Not posted</h4><span class="pill">Saved with a number</span><p>It has its number but touches <b>no balance and no report</b>.</p></div>
+<div><h4>Posted</h4><span class="pill">In the ledger</span><p>It counts in every balance, statement and report.</p></div>
+</div>
+<div class="keep"><p>The list tells you which is which:</p>
+<figure class="fig"><img src="img/01/01-list.png"><figcaption>The voucher list. Look at the Posted column, or use the Yes / No / Both filter.</figcaption></figure></div>
+<p>A voucher you have already cancelled shows <b>Reversed</b> in the Posted column (see section 5).</p>
+<p><b>To open a voucher, click its row.</b> Its buttons are at the bottom right.</p>
+
+<h2>2. Choose what to do</h2>
+<table class="choose">
+<tr><th>The voucher is…</th><th>You want to…</th><th>Click</th></tr>
+<tr><td>Not posted</td><td>Change the amount, date or lines</td><td><span class="btn">Edit</span>, then <span class="btn">Post</span></td></tr>
+<tr><td>Not posted</td><td>Get rid of it completely</td><td><span class="btn">Delete</span> (only if it is the <b>last</b> one of its numbering)</td></tr>
+<tr><td>Posted</td><td>Fix it quietly and post it again</td><td><span class="btn">Unpost</span>, <span class="btn">Edit</span>, <span class="btn">Post</span></td></tr>
+<tr><td>Posted</td><td>Cancel it but keep the history on the statement</td><td><span class="btn">Reverse</span></td></tr>
+</table>
+<div class="box tip"><b class="t">How to choose between Unpost and Reverse</b>
+<b>Unpost</b> takes the voucher back as if it had not been posted. Use it for a simple typing mistake that has not gone anywhere yet.
+<b>Reverse</b> adds a second, opposite voucher, and both stay visible on the statement. Use it when the voucher has already been seen or used, for example sent to the agent or the tax department.</div>
+
+<h2>3. Fix a voucher that is already posted</h2>
+<p>Example: the voucher <b>JV-26-0007, “Computer repair”</b>, was posted for 85.500 but the right amount is 58.500.</p>
+
+<div class="keep"><div class="step"><div class="n">1</div><div>Click the voucher in the list. It opens at the side. A posted voucher has two buttons: <span class="btn">Unpost</span> and <span class="btn">Reverse</span>. Click <span class="btn">Unpost</span>.</div></div>
+<figure class="fig"><img src="img/01/02-posted-drawer.png"><figcaption>An open, posted voucher. Unpost and Reverse are at the bottom right.</figcaption></figure></div>
+
+<div class="keep"><div class="step"><div class="n">2</div><div>A box asks <b>“Unpost JV-26-0007?”</b>. Read what it says, then click <span class="btn">Unpost</span> to confirm. Click <span class="btn">Cancel</span> if you changed your mind.</div></div>
+<figure class="fig"><img src="img/01/03-unpost-confirm.png"><figcaption>The confirmation box.</figcaption></figure></div>
+
+<div class="keep"><div class="step"><div class="n">3</div><div>The voucher closes and the system confirms: <b>“JV-26-0007 is unposted”</b>. The Posted column now says <b>No</b> for it, and every figure that included it has changed.</div></div>
+<figure class="fig"><img src="img/01/04-list-after-unpost.png"><figcaption>After unposting. The voucher keeps its number.</figcaption></figure></div>
+
+<div class="keep"><div class="step"><div class="n">4</div><div>Click the voucher again. It now says <b>“Not posted — in no balance or report”</b> and has the buttons <span class="btn">Edit</span>, <span class="btn">Post</span> and <span class="btn">Delete</span>. Click <span class="btn">Edit</span>.</div></div>
+<figure class="fig"><img src="img/01/05-unposted-drawer.png"><figcaption>Delete is greyed out here, and the reason is written at the top: only the last voucher of its numbering can be deleted.</figcaption></figure></div>
+
+<div class="keep"><div class="step"><div class="n">5</div><div>Type the correct amount on <b>both</b> lines. <b>Difference</b> must show <b>0.000</b>, or the voucher cannot be posted. Then click <span class="btn">Post</span>. (<span class="btn">Save</span> keeps it as not posted if you are not ready.)</div></div>
+<figure class="fig"><img src="img/01/06-edit-form.png"><figcaption>The edit form. Debit and credit must match.</figcaption></figure></div>
+
+<div class="keep"><div class="step"><div class="n">6</div><div>The system says <b>“Posted JV-26-0007”</b> and the list shows <b>Yes</b> again, with the new amount.</div></div>
+<figure class="fig"><img src="img/01/07-list-after-post.png"><figcaption>Fixed. The list shows 58.500.</figcaption></figure></div>
+
+<div class="box warn"><b class="t">If the voucher has payments matched to it</b>
+Unposting releases those matches, and the system tells you how many. After you post again, match the payments again.</div>
+<div class="box warn"><b class="t">Unposting in a month that is already closed</b>
+It is allowed. The figures for that month <b>will change</b>, and the closing entry is <b>not</b> recalculated. Tell your manager before you do it, and write down what you changed.</div>
+
+<h2>4. Delete a voucher</h2>
+<p>Only a voucher that is <b>Not posted</b> <u>and</u> the <b>last one of its numbering</b> can be deleted. This way the numbers never have a gap: the next voucher simply reuses the number. Open it and click <span class="btn">Delete</span>.</p>
+<div class="box stop"><b class="t">Be sure first</b>A deleted voucher is gone. Only its history in the Log remains. If it is posted, Unpost it first.</div>
+
+<h2>5. Reverse a voucher instead</h2>
+<div class="box stop"><b class="t">Reverse happens at once</b>There is <b>no “Are you sure?” box</b>. As soon as you click <span class="btn">Reverse</span>, the opposite voucher is posted. Check you have the right voucher open first.</div>
+<div class="keep"><div class="step"><div class="n">1</div><div>Open the posted voucher and click <span class="btn">Reverse</span>.</div></div>
+<div class="step"><div class="n">2</div><div>A new voucher is posted with the opposite amounts, and the original is marked <b>Reversed</b>. Both stay on the account statement and cancel each other out.</div></div>
+<figure class="fig"><img src="img/01/08-reverse-result.png"><figcaption>After reversing JV-26-0010: the original shows Reversed, and JV-26-0011 is the opposite voucher.</figcaption></figure></div>
+<p>To undo a reversal, Unpost the reversing voucher (the one marked “reversal”).</p>
+
+<h2>6. If a button is greyed out</h2>
+<p style="break-after:avoid">The system tells you why, in words, on the voucher. These are the usual reasons:</p>
+<table>
+<tr><th>What it says</th><th>What to do</th></tr>
+<tr><td>“<i>…is reversed by …. Unpost … first.</i>”</td><td>Unpost the reversing voucher it names, then try again.</td></tr>
+<tr><td>“<i>…is cancelled by …. Unpost … first.</i>”</td><td>Unpost the cancelling credit it names first.</td></tr>
+<tr><td>“<i>…was accepted by JoFotara and the tax department holds it. Reverse it instead.</i>”</td><td>Click <span class="btn">Reverse</span>, then send the correction to the tax department.</td></tr>
+<tr><td>“<i>…was sent to JoFotara and the answer is not known…</i>”</td><td>Check it in JoFotara and retry before changing anything.</td></tr>
+<tr><td>“<i>…is itself a reversal. Unpost it instead.</i>”</td><td>A reversal cannot be reversed. Unpost it.</td></tr>
+<tr><td>“<i>…is already reversed by ….</i>”</td><td>Nothing more to do: it has been reversed already.</td></tr>
+<tr><td>“<i>Only the last … voucher (…) can be deleted, so the numbering has no gap.</i>”</td><td>Delete the later ones first, or Reverse this one if it is posted.</td></tr>
+</table>
+
+<h2>7. Check your work</h2>
+<ul>
+<li>Open the voucher and look at its <b>Log</b>. It shows who did Saved, Edited, Posted, Unposted or Deleted, and when.</li>
+<li>Open the account’s <b>Statement</b> and check the balance is what you expect.</li>
+<li>If you unposted, make sure the voucher is <b>posted again</b>. A voucher left “not posted” counts in no report.</li>
+</ul>
+
+<div class="foot">Questions? Ask the finance manager. · Last checked: ____ · Screens shown are from a test copy of the CRM with made-up vouchers.</div>
+</body></html>
